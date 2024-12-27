@@ -29,11 +29,11 @@ pipeline {
             steps {
                 // Run SonarQube analysis using the maven sonar plugin
                 sh '''
-                   mvn clean verify sonar:sonar \
-                       -Dsonar.projectKey=jenkinsmavensonar \
-                       -Dsonar.projectName="jenkinsmavensonar" \
-                       -Dsonar.host.url=http://localhost:9000 \
-                       -Dsonar.token=$SONARQUBE_TOKEN
+                  mvn clean verify sonar:sonar \
+                          -Dsonar.projectKey=mavensonarjenkins \
+                          -Dsonar.projectName='mavensonarjenkins' \
+                          -Dsonar.host.url=http://localhost:9000 \
+                          -Dsonar.token=sqp_4319582a1e329049ff1aa4ead3d1ce025ca9438f
                 '''
             }
         }
